@@ -1,0 +1,181 @@
+{% load staticfiles %}
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+    {% static 'vendor/asdfsdfasfas/asdf/as/df' %}
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="">
+      <meta name="author" content="">
+    
+      <title>Stylish Portfolio - Start Bootstrap Template</title>
+    
+      <!-- Bootstrap Core CSS -->
+      <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    
+      <!-- Custom Fonts -->
+      <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+      <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+      <link href="{% static 'vendor/simple-line-icons/css/simple-line-icons.css' %}" rel="stylesheet">
+    
+      <!-- Custom CSS -->
+      <link href="{% static 'css/stylish-portfolio.min.css' %}" rel="stylesheet">
+    
+      <style>
+         
+
+
+      </style>
+    </head>
+    
+    <body id="page-top">
+    
+      <!-- Navigation -->
+      <a class="menu-toggle rounded" href="#">
+        <i class="fas fa-bars"></i>
+      </a>
+      <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+          <li class="sidebar-brand">
+            <a class="{% static 'js-scroll-trigger' %}" href="#page-top">Start Bootstrap</a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a class="{% static 'js-scroll-trigger' %}" href="#page-top">Home</a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a class="{% static 'js-scroll-trigger'%}" href="#about">About</a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a class="{% static 'js-scroll-trigger' %}" href="#services">Services</a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a class="{% static 'js-scroll-trigger' %}" href="#portfolio">Portfolio</a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a class="{% static 'js-scroll-trigger' %}" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    
+      <!-- Header -->
+      <header class="masthead d-flex">
+        <div class="container text-center my-auto">
+          <h1 class="mb-1">Word Counter</h1>
+          <h3 class="mb-5">
+            <em>단어수 세기.. 그동안 쉽지 않으셨죠?</em>
+          </h3>
+          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">단어세러가기</a>
+        </div>
+        <div class="overlay"></div>
+      </header>
+    
+      <!-- About -->
+      <section class="content-section bg-light" id="about">
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-10 mx-auto">
+              <h2>여러분이 열심히 작성한 글이 (공백제외) 총 몇 개의 단어로 이루어져 있는지, <br>
+                그리고 그 본문에서 어떤 단어가 총 몇 번 등장하는지를 세 드립니다.</h2>
+              <p class="lead mb-5">무려, 공짜로<br>
+                <a href="https://m.blog.naver.com/PostView.nhn?blogId=dkgoggog21&logNo=220199558168&proxyReferer=https%3A%2F%2Fwww.google.com%2F&view=img_1">개이득!</a>!</p>
+              <a class="btn btn-dark btn-xl js-scroll-trigger" href="#services">WoW</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <!-- Services -->
+      <section class="content-section bg-primary text-white text-center" id="services">
+        <div class="container">
+          <div class="content-section-heading">
+            <h3 class="text-secondary mb-0">고고</h3>
+            <h2 class="mb-5">단어수세기</h2>
+          </div>
+          <!-- <a href="{%url 'home'%}"> <h2> Wordcounter </h2></a> -->
+        <br>
+
+   
+        <div class="card-body">
+            <h5 class="card-title">본문을 입력하세요.</h5>
+            <p class="card-text">
+                <form action="{% url 'result' %} ">
+                    <div class="form-group">
+                    <textarea name="fulltext" class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
+                    </div>
+                <!-- <a class="btn btn-dark btn-xl js-scroll-trigger" href="#callout">결과보기</a> -->
+                <p>제출하시고 스크롤을 내리면 결과를 볼 수 있어요^^</p>
+                    <input type="submit" value="제출" class="btn btn-primary">
+                    <br>
+                    
+                </form>
+
+            </p>
+        </div>
+        </div>
+          
+      </section>
+    
+      <!-- Callout -->
+      <section class="callout" id="callout">
+        <div class="container text-center">
+          <h2 class="mx-auto mb-5">    <div class="container">
+                <div class="alert alert-primary" role="alert">
+                    당신이 입력한 텍스트는 {{total}}개의 단어로 구성되어 있습니다.
+                </div>
+                <br>
+        
+            <div class="card bg-light mb-3" style="max-width: 70rem;">
+                <div class="card-header"><h5>입력한 텍스트</h5></div>
+                <div class="card-body">
+                    <p class="card-text"> {{full}} </p>
+                </div>
+            </div>
+        
+            <div class="card bg-light mb-3" style="max-width: 70rem;">
+                <div class="card-header"><h5>단어 카운트</h5></div>
+                <div class="card-body">
+                    <p class="card-text">
+                        {% for word, howmany in dictionary%}
+                        {{word}} : {{howmany}}번
+                        <br>
+                {%endfor%}
+        
+                    </p>
+                </div>
+            </div>
+            <a href = "#services"> <i class="fas fa-angle-double-left"></i> Again!! </a>
+            </div>
+            
+        </body></h2>
+        </div>
+      </section>
+    
+      
+      <!-- Scroll to Top Button-->
+      <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+      </a>
+    
+      <!-- Bootstrap core JavaScript -->
+      <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+      <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    
+      <!-- Plugin JavaScript -->
+      <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+    
+      <!-- Custom scripts for this template -->
+      <script src="{% static 'js/stylish-portfolio.min.js' %}"></script>
+    
+    </body>
+    
+    </html>
+    
+
